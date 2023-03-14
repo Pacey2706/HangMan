@@ -52,6 +52,7 @@ def main():
             guesses.add(guess)
             if set(word) == guesses:
                 print(f"you win the word was{word}")
+                return
         else:
             print("incorrect")
             num_guesses -= 1
