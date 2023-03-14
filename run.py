@@ -8,11 +8,18 @@ def choose_word():
     """
     words = ["blah", "boop", "numpty", "pacey", "arghhh"]
     return random.choice(words)
-print(choose_word())
+
 def player_guess():
     """
     returns players guess and checks validity
     """
+    player_choice = input("choose a letter: ")
+    if len(player_choice) > 1:
+        print("Invalid guess please try again")
+        return player_guess()
+    else:
+        return player_choice
+print(player_guess())
 
 
 def display_word():
