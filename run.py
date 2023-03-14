@@ -1,6 +1,4 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
+"""Imports random"""
 import random
 
 
@@ -24,11 +22,18 @@ def player_guess():
         return player_choice
 
 
-def display_word():
+def display_word(word, guesses):
     """
-    returns word
+    Displays hidden words unguessed letters with "*"
     """
-
+    hidden_word = ""
+    for x in word:
+        if x in guesses:
+            hidden_word += x
+        else:
+            hidden_word += "*"
+    return hidden_word
+print(display_word("hello", "L"))
 
 def main():
     """
