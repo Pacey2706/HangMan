@@ -2,12 +2,15 @@
 # You can delete these comments, but do not change the name of this file
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 import random
+
+
 def choose_word():
     """
     Chooses a word from random from the list
     """
     words = ["blah", "boop", "numpty", "pacey", "arghhh"]
     return random.choice(words)
+
 
 def player_guess():
     """
@@ -19,13 +22,13 @@ def player_guess():
         return player_guess()
     else:
         return player_choice
-print(player_guess())
 
 
 def display_word():
     """
     returns word
     """
+
 
 def main():
     """
