@@ -33,9 +33,17 @@ def display_word(word, guesses):
         else:
             hidden_word += "*"
     return hidden_word
-print(display_word("hello", "L"))
+
 
 def main():
     """
     runs main mechanics for hangman game
     """
+    word = choose_word()
+    guesses = []
+    num_guesses = 4  #add difficulty section
+    print(f"guesses:{num_guesses}")
+    print(display_word(word, guesses))
+
+main()
+
