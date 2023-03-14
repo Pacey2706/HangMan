@@ -40,10 +40,24 @@ def main():
     runs main mechanics for hangman game
     """
     word = choose_word()
-    guesses = []
-    num_guesses = 4  #add difficulty section
-    print(f"guesses:{num_guesses}")
-    print(display_word(word, guesses))
+    guesses = set()
+    num_guesses = 4  # add difficulty section
+    while num_guesses > 0:
+        print(f"guesses:{num_guesses}")
+        print(display_word(word, guesses))
+        guess = player_guess()
+        if guess in guesses:
+            print("letter already guessed please try again")
+        elif guess in word:
+            guesses.add(guess)
+            if set(word) == guesses:
+                print(f"you win the word was{word}")
+        else:
+            print("incorrect")
+            num_guesses -= 1
+    print(f"sorry you lose the word was {word}")
+
+
 
 main()
 
