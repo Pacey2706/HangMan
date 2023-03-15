@@ -41,7 +41,7 @@ def main():
     """
     word = choose_word()
     guesses = set()
-    num_guesses = 4  # add difficulty section
+    num_guesses = 6  # add difficulty section
     while num_guesses > 0:
         print(f"guesses:{num_guesses}")
         print(display_word(word, guesses))
@@ -60,7 +60,7 @@ def main():
     print(f"sorry you lose the word was  {word}")
 
 
-main()
+
 
 
 # def start_game():
@@ -77,5 +77,70 @@ main()
 #          print("Please either choose (y or n)")
 
 # start_game() come back to this!!
-        
 
+
+def hangman_art(num_guesses):
+    """
+    Prints hang man art that corresponds to users guesses that are left
+    """
+    if num_guesses == 6:
+        print("""
+      _______
+     |/      |
+     |      (_)
+     |      \|/
+     |       |
+     |      / /
+     |
+    _|___""")
+    elif num_guesses == 5:
+        print("""
+      _______
+     |/      |
+     |      (_)
+     |      \|/
+     |       |
+     |      
+     |
+    _|___""")
+    elif num_guesses == 4:
+        print("""
+      _______
+     |/      |
+     |      (_)
+     |      \|
+     |       
+     |      
+     |
+    _|___""")
+    elif num_guesses == 3:
+        print("""
+      _______
+     |/      |
+     |      (_)
+     |      
+     |       
+     |      
+     |
+    _|___""")
+    elif num_guesses == 2:
+        print("""
+      _______
+     |/      |
+     |      
+     |      
+     |       
+     |      
+     |
+    _|___""")
+    elif num_guesses == 1:
+        print("""
+      
+     |      
+     |      
+     |      
+     |       
+     |      
+     |
+    _|___""")
+print(hangman_art(2))    
