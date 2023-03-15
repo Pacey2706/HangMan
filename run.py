@@ -6,7 +6,7 @@ def choose_word():
     """
     Chooses a word from random from the list
     """
-    words = ["blah", "boop", "numpty", "pacey", "arghhh"]
+    words = ["blah", "boop", "numpty", "pacey", "arghhh"]  # find word liabary
     return random.choice(words)
 
 
@@ -27,9 +27,9 @@ def display_word(word, guesses):
     Displays hidden words unguessed letters with "*"
     """
     hidden_word = ""
-    for x in word:
-        if x in guesses:
-            hidden_word += x
+    for l in word:
+        if l in guesses:
+            hidden_word += l
         else:
             hidden_word += "*"
     return hidden_word
@@ -51,14 +51,31 @@ def main():
         elif guess in word:
             guesses.add(guess)
             if set(word) == guesses:
-                print(f"you win the word was{word}")
+                print(f"you win the word was: {word}")
                 return
         else:
             print("incorrect")
             num_guesses -= 1
-    print(f"sorry you lose the word was {word}")
-
+        # add ascii art thingy for each stage of code
+    print(f"sorry you lose the word was  {word}")
 
 
 main()
+
+
+# def start_game():
+#     user = input("Please enter your name: ")
+#     print("Welcome to HangMan would you like to play?")
+#     answer = input("y = yes n = no:")
+#     while answer == "y" or "n":
+#         if answer == "y":
+#          main()
+#         elif answer == "n":
+#           print(f"Goodbye {user}")
+#           quit()
+#       else:
+#          print("Please either choose (y or n)")
+
+# start_game() come back to this!!
+        
 
