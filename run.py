@@ -43,7 +43,7 @@ def main():
     guesses = set()
     num_guesses = 6  # add difficulty section
     while num_guesses > 0:
-        print(f"guesses:{num_guesses}")
+        print(f"guesses: {num_guesses}")
         print(display_word(word, guesses))
         guess = player_guess()
         if guess in guesses:
@@ -59,7 +59,7 @@ def main():
         # add ascii art thingy for each stage of code
     print(f"sorry you lose the word was  {word}")
 
-
+main()
 
 
 
@@ -76,12 +76,13 @@ def main():
 #       else:
 #          print("Please either choose (y or n)")
 
-# start_game() come back to this!!
+# start_game() make this a while loop at the start of the program that calls the main function afterwards
 
 
 def hangman_art(num_guesses):
     """
     Prints hang man art that corresponds to users guesses that are left
+    art used from 'https://ascii.co.uk/art/hangman'
     """
     if num_guesses == 6:
         print("""
@@ -143,4 +144,3 @@ def hangman_art(num_guesses):
      |      
      |
     _|___""")
-print(hangman_art(2))    
