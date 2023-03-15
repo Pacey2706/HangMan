@@ -4,7 +4,7 @@ import random
 
 def choose_word():
     """
-    Chooses a word from random from the list
+    Chooses a word at random from the list
     """
     words = ["blah", "boop", "numpty", "pacey", "arghhh"]  # find word liabary
     return random.choice(words)
@@ -27,9 +27,9 @@ def display_word(word, guesses):
     Displays hidden words unguessed letters with "*"
     """
     hidden_word = ""
-    for l in word:
-        if l in guesses:
-            hidden_word += l
+    for let in word:
+        if let in guesses:
+            hidden_word += let
         else:
             hidden_word += "*"
     return hidden_word
@@ -109,6 +109,7 @@ def main():
     word = choose_word()
     guesses = set()
     num_guesses = 6  # add difficulty section
+    print(f"Lets begin, your word has {len(word)} character \n")
     while num_guesses > 0:
         print(f"guesses: {num_guesses}")
         print(display_word(word, guesses))
@@ -124,7 +125,6 @@ def main():
             print("incorrect")
             num_guesses -= 1
             hangman_art(num_guesses)
-        # add ascii art thingy for each stage of code
     print(f"sorry you lose the word was  {word}")
 
 
