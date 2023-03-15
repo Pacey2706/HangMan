@@ -14,7 +14,7 @@ def player_guess():
     """
     returns players guess and checks validity
     """
-    player_choice = input("choose a letter: ")
+    player_choice = input("choose a letter: ").strip().lower()
     if len(player_choice) > 1:
         print("Invalid guess please try again")
         return player_guess()
@@ -33,6 +33,73 @@ def display_word(word, guesses):
         else:
             hidden_word += "*"
     return hidden_word
+
+
+def hangman_art(num_guesses):
+    """
+    Prints hang man art that corresponds to users guesses that are left
+    art used from 'https://ascii.co.uk/art/hangman'
+    """
+    if num_guesses == 1:
+        print("""
+      _______
+     |/      |
+     |      (_)
+     |      \|/
+     |       |
+     |      / /
+     |
+    _|___""")
+    elif num_guesses == 2:
+        print("""
+      _______
+     |/      |
+     |      (_)
+     |      \|/
+     |       |
+     |      
+     |
+    _|___""")
+    elif num_guesses == 3:
+        print("""
+      _______
+     |/      |
+     |      (_)
+     |      \|
+     |       
+     |      
+     |
+    _|___""")
+    elif num_guesses == 4:
+        print("""
+      _______
+     |/      |
+     |      (_)
+     |      
+     |       
+     |      
+     |
+    _|___""")
+    elif num_guesses == 5:
+        print("""
+      _______
+     |/      |
+     |      
+     |      
+     |       
+     |      
+     |
+    _|___""")
+    elif num_guesses == 6:
+        print("""
+      
+     |      
+     |      
+     |      
+     |       
+     |      
+     |
+    _|___""")
 
 
 def main():
@@ -56,14 +123,15 @@ def main():
         else:
             print("incorrect")
             num_guesses -= 1
+            hangman_art(num_guesses)
         # add ascii art thingy for each stage of code
     print(f"sorry you lose the word was  {word}")
+
 
 main()
 
 
-
-# def start_game():
+#  def start_game():
 #     user = input("Please enter your name: ")
 #     print("Welcome to HangMan would you like to play?")
 #     answer = input("y = yes n = no:")
@@ -76,71 +144,5 @@ main()
 #       else:
 #          print("Please either choose (y or n)")
 
-# start_game() make this a while loop at the start of the program that calls the main function afterwards
-
-
-def hangman_art(num_guesses):
-    """
-    Prints hang man art that corresponds to users guesses that are left
-    art used from 'https://ascii.co.uk/art/hangman'
-    """
-    if num_guesses == 6:
-        print("""
-      _______
-     |/      |
-     |      (_)
-     |      \|/
-     |       |
-     |      / /
-     |
-    _|___""")
-    elif num_guesses == 5:
-        print("""
-      _______
-     |/      |
-     |      (_)
-     |      \|/
-     |       |
-     |      
-     |
-    _|___""")
-    elif num_guesses == 4:
-        print("""
-      _______
-     |/      |
-     |      (_)
-     |      \|
-     |       
-     |      
-     |
-    _|___""")
-    elif num_guesses == 3:
-        print("""
-      _______
-     |/      |
-     |      (_)
-     |      
-     |       
-     |      
-     |
-    _|___""")
-    elif num_guesses == 2:
-        print("""
-      _______
-     |/      |
-     |      
-     |      
-     |       
-     |      
-     |
-    _|___""")
-    elif num_guesses == 1:
-        print("""
-      
-     |      
-     |      
-     |      
-     |       
-     |      
-     |
-    _|___""")
+# start_game() make this a while loop at the start of the program that
+#  calls the main function afterwards
