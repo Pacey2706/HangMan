@@ -9,7 +9,7 @@ def player_instructions():
     with open("player-instructions.txt") as pi:
         instructions = pi.read()
         print(instructions)
-player_instructions()
+
 
 def choose_word():
     """
@@ -138,20 +138,14 @@ def main():
 
 
 
-
-
-#  def start_game():
-#     user = input("Please enter your name: ")
-#     print("Welcome to HangMan would you like to play?")
-#     answer = input("y = yes n = no:")
-#     while answer == "y" or "n":
-#         if answer == "y":
-#          main()
-#         elif answer == "n":
-#           print(f"Goodbye {user}")
-#           quit()
-#       else:
-#          print("Please either choose (y or n)")
-
-# start_game() make this a while loop at the start of the program that
-#  calls the main function afterwards
+user = input("Please enter your name: ")
+print("Welcome to HangMan would you like to play?")
+answer = input("y = yes n = no: ")
+while answer == "y" or "n":
+    if answer == "y":
+        main()
+    elif answer == "n":
+        print(f"Goodbye {user}")
+        quit()
+    else:
+        print("Please either choose (y or n)")
