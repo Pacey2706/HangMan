@@ -2,6 +2,13 @@
 import random
 
 
+def player_instructions():
+    """
+    opens the file 'player-instructions' when called 
+    """
+    
+
+
 def choose_word():
     """
     Chooses a word at random from the list
@@ -109,7 +116,7 @@ def main():
     word = choose_word()
     guesses = set()
     num_guesses = 6  # add difficulty section
-    print(f"Lets begin, your word has {len(word)} character \n")
+    print(f"Lets begin, your word has {len(word)} characters \n")
     while num_guesses > 0:
         print(f"guesses: {num_guesses}")
         print(display_word(word, guesses))
