@@ -6,8 +6,10 @@ def player_instructions():
     """
     opens the file 'player-instructions' when called 
     """
-    
-
+    with open("player-instructions.txt") as pi:
+        instructions = pi.read()
+        print(instructions)
+player_instructions()
 
 def choose_word():
     """
@@ -135,7 +137,7 @@ def main():
     print(f"sorry you lose the word was  {word}")
 
 
-main()
+
 
 
 #  def start_game():
