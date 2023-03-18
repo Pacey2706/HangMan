@@ -144,8 +144,10 @@ answer = input("y = yes n = no: ")
 while answer == "y" or "n":
     if answer == "y":
         main()
+        break
     elif answer == "n":
         print(f"Goodbye {user}")
         quit()
     else:
         print("Please either choose (y or n)")
+    
