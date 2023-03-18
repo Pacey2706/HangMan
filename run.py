@@ -1,6 +1,9 @@
 """Imports random"""
 import random
 
+"""Imports colorama colors and terminal style"""
+from colorama import Fore, Back, Style
+
 
 def player_instructions():
     """
@@ -137,16 +140,16 @@ def main():
     print(f"sorry you lose the word was  {word}")
 
 
-user = input("Please enter your name: ")
-print("Welcome to HangMan would you like to play?")
-answer = input("y = yes n = no: ")
-while answer == "y" or "n":
-    if answer == "y":
-        main()
-        break
-    elif answer == "n":
-        print(f"Goodbye {user}")
-        quit()
-    else:
-        print("Please either choose (y or n)")
+# user = input("Please enter your name: ")
+# print("Welcome to HangMan would you like to play?")
+# answer = input("y = yes n = no: ").strip().lower()
+# while answer == "y" or "n":
+#     if answer == "y":
+#         main()
+#         break
+#     elif answer == "n":
+#         print(f"Goodbye {user}")
+#         quit()
+#     else:
+#         print("Please either choose (y or n)")
     
