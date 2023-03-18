@@ -6,7 +6,7 @@ def player_instructions():
     """
     opens the file 'player-instructions' when called 
     """
-    with open("player-instructions.txt") as pi:
+    with open("player-instructions.txt") as pi: # write out instructions
         instructions = pi.read()
         print(instructions)
 
@@ -135,7 +135,6 @@ def main():
             num_guesses -= 1
             hangman_art(num_guesses)
     print(f"sorry you lose the word was  {word}")
-
 
 
 user = input("Please enter your name: ")
