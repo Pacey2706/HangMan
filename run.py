@@ -1,16 +1,13 @@
-"""Imports random"""
-import random
-
-"""Imports colorama colors and terminal style"""
-from colorama import Fore, Back, Style
+import random   # Imports random
+from colorama import Fore, Style  # Imports colorama colors and terminal style
 
 
 def player_instructions():
     """
-    opens the file 'player-instructions' when called 
+    opens the file 'player-instructions' when called
     """
-    with open("player-instructions.txt") as pi: # write out instructions
-        instructions = pi.read()
+    with open("player-instructions.txt") as p_i:
+        instructions = p_i.read()
         print(instructions)
 
 
@@ -18,7 +15,8 @@ def choose_word():
     """
     Chooses a word at random from the list
     """
-    words = ["blah", "boop", "numpty", "pacey", "arghhh"]  # find word liabary
+    words = ["hello", "scooter", "hobbits", "wizard", "elephant",
+             "picnic", "apple", "yellow", "slide", "naughty", "towers"]
     return random.choice(words)
 
 
@@ -70,7 +68,7 @@ def hangman_art(num_guesses):
      |      (_)
      |      \|/
      |       |
-     |      
+     |    
      |
     _|___""")
         print(Style.RESET_ALL)
@@ -118,6 +116,7 @@ def hangman_art(num_guesses):
      |
     _|___""")
         print(Style.RESET_ALL)
+
 
 def main(user):
     """
@@ -173,8 +172,5 @@ while answer == "y" or "n":
             print(f"Goodbye {user}")
             quit()
         else:
-            print(f"Sorry {user}, response invalid to play please reload the program")
+            print(f"Sorry {user}, response invalid. Please reload the program")
             quit()
-        
-        
-    
