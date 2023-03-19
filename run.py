@@ -114,30 +114,30 @@ def hangman_art(num_guesses):
     _|___""")
 
 
-def main():
+def main(user):
     """
     runs main mechanics for hangman game
     """
     word = choose_word()
     guesses = set()
     num_guesses = 6  # add difficulty section
-    print(f"Lets begin, your word has {len(word)} characters \n")
+    print(f"Lets begin {user}, your word has {len(word)} characters \n")
     while num_guesses > 0:
         print(f"guesses: {num_guesses}")
         print(display_word(word, guesses))
         guess = player_guess()
         if guess in guesses:
-            print("letter already guessed please try again")
+            print(f"Sorry {user} letter already guessed please try again")
         elif guess in word:
             guesses.add(guess)
             if set(word) == guesses:
-                print(f"you win the word was: {word}")
+                print(f"Congratulations {user}, the word was: {word}")
                 return
         else:
             print("incorrect")
             num_guesses -= 1
             hangman_art(num_guesses)
-    print(f"sorry you lose the word was  {word}")
+    print(f"Sorry {user} better luck next time, the word was  {word}")
 
 
 user = input("Please enter your name: ")
@@ -145,7 +145,7 @@ print("Welcome to HangMan would you like to play?")
 answer = input("y = yes n = no: ").strip().lower()
 while answer == "y" or "n":
     if answer == "y":
-        main()
+        main(user)
         break
     elif answer == "n":
         print(f"Goodbye {user}")
@@ -154,7 +154,7 @@ while answer == "y" or "n":
         print("Invalid response please choose either y or n")
         sec_answer = input("y = yes n = no: ").strip().lower()
         if sec_answer == "y":
-            main()
+            main(user)
             break
         elif answer == "n":
             print(f"Goodbye {user}")
