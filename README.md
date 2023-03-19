@@ -12,11 +12,17 @@ their name is then used through out the game for a more personal experince.
 
 ### future features 
 In the future I would like this game to incorporate a highscore chart linked to a database that would update after each game.
-I would also like to add a difficulty setting where the player can choose what
+I would also like to add a difficulty setting where the player can choose how hard they would like the game to be 
 ## technology 
-
+Python
 ## bugs and errors 
-
+While deveolping the game I encountered a bug for the users letter choice. if the user added spaces or more than one letter the program would crash. to fix this I added .strip() and .lower()
 ## testing
-
+the program has been ran through the pep8ci checker 
+15 x W291 errors relating to the hangman visuals
+3 x W605 errors relating to the hangman visuals 
 ## credits 
+youtube- Kite
+How to build HANGMAN with Python in 10 MINUTES
+ascii art- 
+https://ascii.co.uk/art/hangman
