@@ -1,1 +1,13 @@
 Player Instructions:
+1) The program will present you with how many 
+guesses are left.
+2) The hidden word is covered by "*"
+3) You will have a input feild where you may choose 
+your guess by typing a letter
+4) If guessed correctly your guesses left will not decrease 
+and the letter will be dispalyed instead of "*"
+5) If guessed incorrectly a image of a man hanging will be 
+displayed and a guess will be removed
+6) if all guesses have been used up you will lose the game 
+7) if you guess the word correctly you will recieve a congratulation 
+message stating you have won

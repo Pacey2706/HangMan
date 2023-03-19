@@ -150,6 +150,10 @@ print("Welcome to HangMan would you like to play?")
 answer = input("y = yes n = no: ").strip().lower()
 while answer == "y" or "n":
     if answer == "y":
+        print("Do you need instuctions for the game?")
+        int_an = input("y = yes, anything else = no: ").strip().lower()
+        if int_an == "y":
+            player_instructions()
         main(user)
         break
     elif answer == "n":
@@ -159,13 +163,17 @@ while answer == "y" or "n":
         print("Invalid response please choose either y or n")
         sec_answer = input("y = yes n = no: ").strip().lower()
         if sec_answer == "y":
+            print("Do you need instuctions for the game?")
+            int_an = input("y = yes, anything else = no: ").strip().lower()
+            if int_an == "y":
+                player_instructions()
             main(user)
             break
         elif answer == "n":
             print(f"Goodbye {user}")
             quit()
         else:
-            print(f"Sorry {user}, response invalid to play pkease reload the program")
+            print(f"Sorry {user}, response invalid to play please reload the program")
             quit()
         
         
