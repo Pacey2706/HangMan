@@ -140,16 +140,28 @@ def main():
     print(f"sorry you lose the word was  {word}")
 
 
-# user = input("Please enter your name: ")
-# print("Welcome to HangMan would you like to play?")
-# answer = input("y = yes n = no: ").strip().lower()
-# while answer == "y" or "n":
-#     if answer == "y":
-#         main()
-#         break
-#     elif answer == "n":
-#         print(f"Goodbye {user}")
-#         quit()
-#     else:
-#         print("Please either choose (y or n)")
+user = input("Please enter your name: ")
+print("Welcome to HangMan would you like to play?")
+answer = input("y = yes n = no: ").strip().lower()
+while answer == "y" or "n":
+    if answer == "y":
+        main()
+        break
+    elif answer == "n":
+        print(f"Goodbye {user}")
+        quit()
+    elif answer != "y" or "n":
+        print("Invalid response please choose either y or n")
+        sec_answer = input("y = yes n = no: ").strip().lower()
+        if sec_answer == "y":
+            main()
+            break
+        elif answer == "n":
+            print(f"Goodbye {user}")
+            quit()
+        else:
+            print(f"Sorry {user}, response invalid to play pkease reload the program")
+            quit()
+        
+        
     
