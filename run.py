@@ -52,8 +52,8 @@ def hangman_art(num_guesses):
     Prints hang man art that corresponds to users guesses that are left
     art used from 'https://ascii.co.uk/art/hangman'
     """
-    if num_guesses == 1:
-        print("""
+    if num_guesses == 0:
+        print(Fore.RED + """
       _______
      |/      |
      |      (_)
@@ -62,8 +62,9 @@ def hangman_art(num_guesses):
      |      / /
      |
     _|___""")
-    elif num_guesses == 2:
-        print("""
+        print(Style.RESET_ALL)
+    elif num_guesses == 1:
+        print(Fore.RED + """
       _______
      |/      |
      |      (_)
@@ -72,8 +73,9 @@ def hangman_art(num_guesses):
      |      
      |
     _|___""")
-    elif num_guesses == 3:
-        print("""
+        print(Style.RESET_ALL)
+    elif num_guesses == 2:
+        print(Fore.RED + """
       _______
      |/      |
      |      (_)
@@ -82,8 +84,9 @@ def hangman_art(num_guesses):
      |      
      |
     _|___""")
-    elif num_guesses == 4:
-        print("""
+        print(Style.RESET_ALL)
+    elif num_guesses == 3:
+        print(Fore.RED + """
       _______
      |/      |
      |      (_)
@@ -92,8 +95,9 @@ def hangman_art(num_guesses):
      |      
      |
     _|___""")
-    elif num_guesses == 5:
-        print("""
+        print(Style.RESET_ALL)
+    elif num_guesses == 4:
+        print(Fore.RED + """
       _______
      |/      |
      |      
@@ -102,8 +106,9 @@ def hangman_art(num_guesses):
      |      
      |
     _|___""")
-    elif num_guesses == 6:
-        print("""
+        print(Style.RESET_ALL)
+    elif num_guesses == 5:
+        print(Fore.RED + """
       
      |      
      |      
@@ -112,7 +117,7 @@ def hangman_art(num_guesses):
      |      
      |
     _|___""")
-
+        print(Style.RESET_ALL)
 
 def main(user):
     """
