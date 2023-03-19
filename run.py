@@ -1,5 +1,4 @@
 import random   # Imports random
-from colorama import Fore, Style  # Imports colorama colors and terminal style
 
 
 def player_instructions():
@@ -51,7 +50,7 @@ def hangman_art(num_guesses):
     art used from 'https://ascii.co.uk/art/hangman'
     """
     if num_guesses == 0:
-        print(Fore.RED + """
+        print("""
       _______
      |/      |
      |      (_)
@@ -60,9 +59,8 @@ def hangman_art(num_guesses):
      |      / /
      |
     _|___""")
-        print(Style.RESET_ALL)
     elif num_guesses == 1:
-        print(Fore.RED + """
+        print("""
       _______
      |/      |
      |      (_)
@@ -71,9 +69,8 @@ def hangman_art(num_guesses):
      |    
      |
     _|___""")
-        print(Style.RESET_ALL)
     elif num_guesses == 2:
-        print(Fore.RED + """
+        print("""
       _______
      |/      |
      |      (_)
@@ -82,9 +79,8 @@ def hangman_art(num_guesses):
      |      
      |
     _|___""")
-        print(Style.RESET_ALL)
     elif num_guesses == 3:
-        print(Fore.RED + """
+        print("""
       _______
      |/      |
      |      (_)
@@ -93,9 +89,8 @@ def hangman_art(num_guesses):
      |      
      |
     _|___""")
-        print(Style.RESET_ALL)
     elif num_guesses == 4:
-        print(Fore.RED + """
+        print("""
       _______
      |/      |
      |      
@@ -104,9 +99,8 @@ def hangman_art(num_guesses):
      |      
      |
     _|___""")
-        print(Style.RESET_ALL)
     elif num_guesses == 5:
-        print(Fore.RED + """
+        print("""
       
      |      
      |      
@@ -115,7 +109,6 @@ def hangman_art(num_guesses):
      |      
      |
     _|___""")
-        print(Style.RESET_ALL)
 
 
 def main(user):
